@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  rust-playground:
+    image: rust-playground:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    privileged: yes
+    container_name: rust-playground
+    hostname: 'playground'
+    volumes:
+      - "${HOME}/rust-playground:/rust/rust-playground:rw"
+      - "/tmp/.X11-unix:/tmp/.X11-unix:rw"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
