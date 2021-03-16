@@ -5,3 +5,4 @@ authors = ["Michael Chiou"]
 
 [dependencies]
 tokio = { version = "1", features = ["full"] }
+csv = "1.1"
